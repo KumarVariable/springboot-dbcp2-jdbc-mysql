@@ -1,9 +1,9 @@
-# Accessing MySQL Database (Amazon Corretto OpenJDK 11 /Spring Boot).
+## Accessing MySQL Database (Amazon Corretto OpenJDK 11 /Spring Boot).
 
 This is a Java/Spring Boot template for building a microservice to communicate with MySQL database.  
 This service demonstrates use of Apache Commons DBCP2 to manage connection pool, DataSource, JdbcTemplate and NamedParameterJdbcTemplate required to perform database operations.
 
-# Repository structure
+## Repository structure
 
 The main files in this repository are:
 
@@ -15,7 +15,7 @@ The main files in this repository are:
 
 - `mysql_scripts:` *database scripts to create schema,insert dummy data into MySQL.*
 
-# Usage
+## Usage
 
 * Download the repository from GitHub.
 
@@ -28,7 +28,7 @@ The main files in this repository are:
 
 * Run main class <B> `BootDbcp2MySqlApplication.class` </B> to execute the application and it's business layer.
 
-# License
+## License
 
 Licensed under GNU General Public License v3.0. Please see [LICENSE](LICENSE) for details.
 
