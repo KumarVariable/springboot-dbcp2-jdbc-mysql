@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.3</version>
+	</parent>
+
+	<groupId>com.mysql.springboot</groupId>
+	<artifactId>springboot-dbcp2-jdbc-mysql</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+
+	<name>springboot-dbcp2-jdbc-mysql</name>
+	<description>A simple springboot-dbcp2-jdbc-mysql.</description>
+	<developers>
+		<developer>
+			<name>metanoia</name>
+		</developer>
+	</developers>
+
+
+	<properties>
+		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+		<!-- Provides starter and libraries for connecting an application with 
+			Jdbc.Database related beans [DataSource, JdbcTemplate, NamedParameterJdbcTemplate] 
+			will be auto-configured and created during the startup. Exclude Spring provided 
+			default connection pool HikariCP -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.zaxxer</groupId>
+					<artifactId>HikariCP</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Jdbc Type 4 Driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<!-- Apache Commons Database Connection Pooling -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>springboot-dbcp2-jdbc-mysql</finalName>
+
+		<pluginManagement>
+
+			<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+		
+	</build>
+
+
+</project>
