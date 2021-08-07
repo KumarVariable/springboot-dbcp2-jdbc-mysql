@@ -21,7 +21,10 @@ The main files in this repository are:
 
 * Execute maven command to build application or directly run through IDE.
 
-> ..\springboot-dbcp2-jdbc-mysql> mvn clean package -e -U
+```
+..\springboot-dbcp2-jdbc-mysql> mvn clean package -e -U
+
+```
 
 * Run main class <B> `BootDbcp2MySqlApplication.class` </B> to execute the application and it's business layer.
 
