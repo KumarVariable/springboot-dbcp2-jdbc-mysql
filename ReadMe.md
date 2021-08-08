@@ -26,7 +26,13 @@ The main files in this repository are:
 
 ```
 
-* Run main class <B> `BootDbcp2MySqlApplication.class` </B> to execute the application and it's business layer.
+* Run main class <B> `BootDbcp2MySqlApplication.class` </B> through IDE or through Maven Spring boot commands.
+
+```
+mvn spring-boot:run
+
+```
+
 
 ## License
 
